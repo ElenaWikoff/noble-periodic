@@ -1,2 +1,3 @@
-# noble-periodic
+# Noble Periodic
+
 Periodic Table App
