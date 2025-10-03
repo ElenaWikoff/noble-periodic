@@ -23,6 +23,7 @@ module.exports = {
   rules: {
     "react/react-in-jsx-scope": "off", // Not needed in projects using React 17+
     "react/prop-types": "off", // Disable prop-types rule if you're using TypeScript
+    "indent": ["error", 2] // Allow tab width of 2
   },
   settings: {
     react: {
