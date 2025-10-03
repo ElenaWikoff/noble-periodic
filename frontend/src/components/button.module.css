@@ -13,6 +13,27 @@
     --btn-primaryOutlineHover-bg: var(--gold-0);
     --btn-primaryOutline-border: var(--gray);
     --btn-primaryOutlineHover-border: var(--gold-0);
+    /* Solid Variant Colors */
+    --btn-solid-color: var(--gray);
+    --btn-solidHover-color: var(--solid-color);
+    --btn-solid-bg: var(--white);
+    --btn-solidHover-bg: var(--white);
+    --btn-solid-border: var(--gray);
+    --btn-solidHover-border: var(--solid-color);
+    /* Liquid Variant Colors */
+    --btn-liquid-color: var(--gray);
+    --btn-liquidHover-color: var(--liquid-color);
+    --btn-liquid-bg: var(--white);
+    --btn-liquidHover-bg: var(--white);
+    --btn-liquid-border: var(--gray);
+    --btn-liquidHover-border: var(--liquid-color);
+    /* Gas Variant Colors */
+    --btn-gas-color: var(--gray);
+    --btn-gasHover-color: var(--gas-color);
+    --btn-gas-bg: var(--white);
+    --btn-gasHover-bg: var(--white);
+    --btn-gas-border: var(--gray);
+    --btn-gasHover-border: var(--gas-color);
 }
 
 /* Button */
@@ -30,6 +51,7 @@
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     outline: 0 !important;
+    overflow: hidden;
     transition: all 0.2s ease-in-out;
 }
 
@@ -84,3 +106,65 @@
     border-color: var(--btn-primary-border);
     box-shadow: none;
 }
+
+.btn-toggle-solid {
+    color: var(--btn-solid-color);
+    background-color: var(--btn-solid-bg);
+    border-color: var(--btn-solid-border);
+}
+
+.btn-toggle-solid:not(.active):active,
+.btn-toggle-solid:not(.active):hover {
+    color: var(--btn-solidHover-color);
+    background-color: var(--btn-solidHover-bg);
+    border-color: var(--btn-solidHover-border);
+}
+
+.btn-toggle-solid.active {
+    color: var(--white);
+    background-color: var(--solid-color);
+    border-color: var(--solid-color);
+    box-shadow: none;
+}
+
+.btn-toggle-liquid {
+    color: var(--btn-liquid-color);
+    background-color: var(--btn-liquid-bg);
+    border-color: var(--btn-liquid-border);
+}
+
+.btn-toggle-liquid:not(.active):active,
+.btn-toggle-liquid:not(.active):hover {
+    color: var(--btn-liquidHover-color);
+    background-color: var(--btn-liquidHover-bg);
+    border-color: var(--btn-liquidHover-border);
+}
+
+.btn-toggle-liquid.active {
+    color: var(--white);
+    background-color: var(--liquid-color);
+    border-color: var(--liquid-color);
+    box-shadow: none;
+}
+
+.btn-toggle-gas {
+    color: var(--btn-gas-color);
+    background-color: var(--btn-gas-bg);
+    border-color: var(--btn-gas-border);
+}
+
+.btn-toggle-gas:not(.active):active,
+.btn-toggle-gas:not(.active):hover {
+    color: var(--btn-gasHover-color);
+    background-color: var(--btn-gasHover-bg);
+    border-color: var(--btn-gasHover-border);
+}
+
+.btn-toggle-gas.active {
+    color: var(--white);
+    background-color: var(--gas-color);
+    border-color: var(--gas-color);
+    box-shadow: none;
+    transition: all 0s;
+}
+

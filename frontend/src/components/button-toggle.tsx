@@ -7,8 +7,8 @@ interface ButtonToggleProps {
   leftIcon?: ReactNode,
   rightIcon?: ReactNode,
   title?: string,
-  active: boolean,
-  onToggle: () => void,
+  active?: boolean,
+  onToggle?: () => void,
 }
 
 const ButtonToggle: React.FC<ButtonToggleProps> = ({ 
@@ -21,9 +21,7 @@ const ButtonToggle: React.FC<ButtonToggleProps> = ({
   onToggle,
 }) => {
 
-  const handleToggle = () => {
-    onToggle();
-  }
+  const handleToggle = () => onToggle?.();
 
   return (
     <button 
