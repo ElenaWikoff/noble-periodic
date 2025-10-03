@@ -1,25 +1,20 @@
 import "./index.css";
 import "./App.css";
-import Button from "./components/button";
-import { CgAdidas, CgAdd } from "react-icons/cg";
+import { FaMoon } from "react-icons/fa";
+import ButtonToggle from "./components/button-toggle";
+import { useState } from "react";
 
 function App() {
+  const [active, setActive] = useState(false);
+
   return (
     <>
       <main style={{margin: "30px", fontSize: "36px"}}>
-        <Button 
-          variant="primary" 
-          label="Button" 
-          leftIcon={<CgAdidas />}
-          rightIcon={<CgAdd />}
-          title="Press Button"
-        />
-        <Button 
-          variant="primaryOutline" 
-          label="Button" 
-          leftIcon={<CgAdidas />}
-          rightIcon={<CgAdd />}
-          title="Press Button"
+        <ButtonToggle 
+          leftIcon={<FaMoon />}
+          title="Dark Mode"
+          active={active}
+          onToggle={() => setActive(!active)}
         />
       </main>
     </>

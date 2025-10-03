@@ -15,7 +15,10 @@
     --btn-primaryOutlineHover-border: var(--gold-0);
 }
 
-.btn {
+/* Button */
+
+.btn,
+.btn-toggle {
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -59,4 +62,25 @@
     color: var(--btn-primaryOutlineHover-color);
     background-color: var(--btn-primarOutlineHover-bg);
     border-color: var(--btn-primaryOutlineHover-border);
+}
+
+/* Toggle Button */
+.btn-toggle-default {
+    color: var(--btn-primaryOutline-color);
+    background-color: var(--btn-primaryOutline-bg);
+    border-color: var(--btn-primaryOutline-border);
+}
+
+.btn-toggle-default:active,
+.btn-toggle-default:hover {
+    color: var(--btn-primaryOutlineHover-color);
+    background-color: var(--btn-primarOutlineHover-bg);
+    border-color: var(--btn-primaryOutlineHover-border);
+}
+
+.btn-toggle-default.active {
+    color: var(--btn-primary-color);
+    background-color: var(--btn-primary-bg);
+    border-color: var(--btn-primary-border);
+    box-shadow: none;
 }
