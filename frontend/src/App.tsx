@@ -4,7 +4,7 @@ import { FaMoon } from "react-icons/fa";
 import { 
   GiMetalPlate as SolidIcon, 
   GiWaterSplash as LiquidIcon, 
-  GiBottleVapors as GasIcon,
+  GiSteam as GasIcon,
 } from "react-icons/gi";
 import ButtonToggle from "./components/button-toggle";
 import { useState } from "react";
