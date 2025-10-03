@@ -1,0 +1,20 @@
+:root {
+    /* Primary Colors */
+    --gold-0: #f0c22d;
+    --gold-1: #f0cb55;
+    --gold-2: #ebd281;
+    --gold-3: #ebd89b;
+    --gold-4: #ebddad;
+
+    /* Element Colors */
+    --reactive-nonmetals-color: #e9f9d6;
+    --noble-gases-color: #f8deff;
+    --akali-color: #fbe5ba;
+    --alkaline-color: #fffac4;
+    --metalloids-color: #ddeceb;
+    --post-transition-color: #daf3ff;
+    --transition-color: #ffdede;
+    --lanthanoids-color: #e6d8c3;
+    --actinoids-color: #ffe6e6;
+    --unknown-color: #f5f5f0;
+}
