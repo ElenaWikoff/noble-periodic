@@ -1,0 +1,62 @@
+:root {
+    /* Primary Variant Colors */
+    --btn-primary-color: var(--white);
+    --btn-primaryHover-color: var(--white);
+    --btn-primary-bg: var(--gold-0);
+    --btn-primaryHover-bg: var(--gold-1);
+    --btn-primary-border: var(--btn-primary-bg);
+    --btn-primaryHover-border: var(--btn-primaryHover-bg);
+    /* Primary Outline Variant Colors */
+    --btn-primaryOutline-color: var(--gray);
+    --btn-primaryOutlineHover-color: var(--gold-0);
+    --btn-primaryOutline-bg: var(--white);
+    --btn-primaryOutlineHover-bg: var(--gold-0);
+    --btn-primaryOutline-border: var(--gray);
+    --btn-primaryOutlineHover-border: var(--gold-0);
+}
+
+.btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 5px;
+    font-weight: 600;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    outline: 0 !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:active,
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn-primary {
+    color: var(--btn-primary-color);
+    background-color: var(--btn-primary-bg);
+    border-color: var(--btn-primary-border);
+}
+
+.btn-primary:active,
+.btn-primary:hover {
+    color: var(--btn-primaryHover-color);
+    background-color: var(--btn-primaryHover-bg);
+    border-color: var(--btn-primaryHover-border);
+}
+
+.btn-primaryOutline {
+    color: var(--btn-primaryOutline-color);
+    background-color: var(--btn-primaryOutline-bg);
+    border-color: var(--btn-primaryOutline-border);
+}
+
+.btn-primaryOutline:active,
+.btn-primaryOutline:hover {
+    color: var(--btn-primaryOutlineHover-color);
+    background-color: var(--btn-primarOutlineHover-bg);
+    border-color: var(--btn-primaryOutlineHover-border);
+}
