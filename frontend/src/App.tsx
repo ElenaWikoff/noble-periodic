@@ -12,12 +12,14 @@ function App() {
           label="Button" 
           leftIcon={<CgAdidas />}
           rightIcon={<CgAdd />}
+          title="Press Button"
         />
         <Button 
           variant="primaryOutline" 
           label="Button" 
           leftIcon={<CgAdidas />}
           rightIcon={<CgAdd />}
+          title="Press Button"
         />
       </main>
     </>

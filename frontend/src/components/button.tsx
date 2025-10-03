@@ -6,6 +6,7 @@ interface ButtonProps {
   variant: string,
   leftIcon?: ReactNode,
   rightIcon?: ReactNode,
+  title?: string,
 }
 
 const Button: React.FC<ButtonProps> = ({ 
@@ -13,10 +14,14 @@ const Button: React.FC<ButtonProps> = ({
   variant = "primary", 
   leftIcon, 
   rightIcon, 
+  title,
 }) => {
 
   return (
-    <button title={label} className={`${styles.btn} ${styles[`btn-${variant}`]}`}>
+    <button 
+      title={title ? title : label} 
+      className={`${styles.btn} ${styles[`btn-${variant}`]}`}
+    >
       {leftIcon}
       {label}
       {rightIcon}
