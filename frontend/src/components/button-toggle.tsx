@@ -25,6 +25,7 @@ const ButtonToggle: React.FC<ButtonToggleProps> = ({
 
   return (
     <button 
+      type="button"
       title={title ? title : label} 
       className={`${styles["btn-toggle"]} ${styles[`btn-toggle-${variant}`]} ${active ? styles.active : ""}`}
       style={{padding: `${!label ? "7.5px" : "0px 5px"}`}}

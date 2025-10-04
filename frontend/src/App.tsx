@@ -44,6 +44,7 @@ function App() {
   return (
     <>
       <main style={{margin: "30px", fontSize: "36px"}}>
+        <img src="./src/assets/images/logo-light.png" />
         <ButtonToggle 
           leftIcon={<FaMoon />}
           title="Dark Mode"

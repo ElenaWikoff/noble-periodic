@@ -19,6 +19,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button 
+      type="button"
       title={title ? title : label} 
       className={`${styles.btn} ${styles[`btn-${variant}`]}`}
     >
