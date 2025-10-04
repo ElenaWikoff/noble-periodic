@@ -1,0 +1,51 @@
+
+:root {
+    --border-focus-color: var(--gold-0);
+    --placeholder-color: var(--gray);
+}
+
+.input-wrapper {
+    position: relative;
+}
+.input {
+    width: 300px;
+    border: 0;
+    border-radius: 10px;
+    padding: 2px 10px;
+    border: 2px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px inset;
+    caret-color: var(--gold-0);
+    transition: width 1s ease-in-out;
+}
+
+.input:focus {
+    width: 600px;
+    border-color: var(--border-focus-color);
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px inset;
+}
+
+.input-wrapper:has(> .input:focus) .icon-wrapper {
+    display: none;
+    visibility: hidden;
+}
+
+.icon-wrapper,
+.input::placeholder {
+    color: var(--placeholder-color);
+}
+
+.icon-wrapper {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-left .icon-wrapper {
+    left: 10px;
+}
+
+.icon-right .icon-wrapper {
+    right: 10px;
+}

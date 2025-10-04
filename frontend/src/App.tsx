@@ -7,7 +7,10 @@ import {
   GiWaterSplash as LiquidIcon, 
   GiSteam as GasIcon,
 } from "react-icons/gi";
+import { IoSearchSharp as SearchIcon } from "react-icons/io5";
 import ButtonToggle from "@/components/button-toggle";
+import Input from "@/components/input";
+import { useDebounce } from "./hooks/useDebounce";
 
 const phaseButtons = [
   {
@@ -36,6 +39,18 @@ const phaseButtons = [
 function App() {
   const [active, setActive] = useState(false);
   const [phase, setPhase] = useState(0);
+  const [query, setQuery] = useState<string>("")
+  const debouncedQuery = useDebounce<string>(query, 500);
+
+  // useEffect(() => {
+  //   if (debouncedQuery) {
+
+  //   }
+  // }, [debouncedQuery])
+
+  const handleInput = (e: React.FormEvent<HTMLInputElement>) => {
+    setQuery(e.currentTarget.value);
+  }
 
   const handleActive = (value: number) => {
     setPhase(phase === value ? 0 : value);
@@ -43,7 +58,7 @@ function App() {
 
   return (
     <>
-      <main style={{margin: "30px", fontSize: "36px"}}>
+      <main style={{margin: "30px", fontSize: "36px", display: "flex", flexDirection: "column", gap: "10px", alignItems: "flex-start"}}>
         <img src="./src/assets/images/logo-light.png" />
         <ButtonToggle 
           leftIcon={<FaMoon />}
@@ -61,6 +76,14 @@ function App() {
                   {...props}
                 />;
         })}
+        <Input 
+          onInput={handleInput}
+          icon={<SearchIcon />}
+          iconSide="right"
+          placeholder="Search"
+        />
+        <p>Query: {query}</p>
+        <p>Debounced: {debouncedQuery}</p>
       </main>
     </>
   );
