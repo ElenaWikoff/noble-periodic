@@ -1,13 +1,13 @@
-import "./index.css";
-import "./App.css";
+import "@/index.css";
+import "@/App.css";
+import { useState } from "react";
 import { FaMoon } from "react-icons/fa";
 import { 
   GiMetalPlate as SolidIcon, 
   GiWaterSplash as LiquidIcon, 
   GiSteam as GasIcon,
 } from "react-icons/gi";
-import ButtonToggle from "./components/button-toggle";
-import { useState } from "react";
+import ButtonToggle from "@/components/button-toggle";
 
 const phaseButtons = [
   {

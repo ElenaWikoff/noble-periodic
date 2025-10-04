@@ -1,5 +1,5 @@
 import React, { type ReactNode } from 'react';
-import styles from "./button.module.css"
+import styles from "@/components/button.module.css"
 
 interface ButtonToggleProps {
   label?: string,
