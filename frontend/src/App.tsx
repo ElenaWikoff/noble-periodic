@@ -11,6 +11,7 @@ import { IoSearchSharp as SearchIcon } from "react-icons/io5";
 import ButtonToggle from "@/components/button-toggle";
 import Input from "@/components/input";
 import { useDebounce } from "./hooks/useDebounce";
+import ElementCard from "./components/element-card";
 
 const phaseButtons = [
   {
@@ -84,6 +85,12 @@ function App() {
         />
         <p>Query: {query}</p>
         <p>Debounced: {debouncedQuery}</p>
+        <ElementCard 
+          name={"Helium"} 
+          number={2} 
+          mass={4.0026022} 
+          symbol={"He"}        
+        />
       </main>
     </>
   );

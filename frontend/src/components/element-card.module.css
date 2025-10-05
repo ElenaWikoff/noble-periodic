@@ -1,0 +1,16 @@
+:root {
+    /* Default Colors */
+    --default-border-color: var(--graphite);
+}
+
+.element-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 225px;
+    padding: 10px 20px;
+    border: 7px solid var(--default-border-color);
+    aspect-ratio: min(1vw, 1.85vh + (18 - 18) * 0.109vh);
+}
+
