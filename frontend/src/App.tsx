@@ -11,7 +11,7 @@ import { IoSearchSharp as SearchIcon } from "react-icons/io5";
 import ButtonToggle from "@/components/button-toggle";
 import Input from "@/components/input";
 import { useDebounce } from "./hooks/useDebounce";
-import ElementCard from "./components/element-card";
+import PeriodTable from "./components/periodic-table";
 
 const phaseButtons = [
   {
@@ -19,27 +19,27 @@ const phaseButtons = [
     label: "Solids",
     leftIcon: <SolidIcon />,
     title: "Show solids",
-    value: 1,
+    value: "solid",
   },
   {
     variant: "liquid",
     label: "Liquids",
     leftIcon: <LiquidIcon />,
     title: "Show liquids",
-    value: 2,
+    value: "liquid",
   },
   {
     variant: "gas",
     label: "Gases",
     leftIcon: <GasIcon />,
     title: "Show gases",
-    value: 3,
+    value: "gas",
   },
 ]
 
 function App() {
   const [active, setActive] = useState(false);
-  const [phase, setPhase] = useState(0);
+  const [phase, setPhase] = useState("");
   const [query, setQuery] = useState<string>("")
   const debouncedQuery = useDebounce<string>(query, 500);
 
@@ -53,13 +53,13 @@ function App() {
     setQuery(e.currentTarget.value);
   }
 
-  const handleActive = (value: number) => {
-    setPhase(phase === value ? 0 : value);
+  const handleActive = (value: string) => {
+    setPhase(phase === value ? "" : value);
   }
 
   return (
     <>
-      <main style={{margin: "30px", fontSize: "36px", display: "flex", flexDirection: "column", gap: "10px", alignItems: "flex-start"}}>
+      <main style={{margin: "30px", display: "flex", flexDirection: "column", gap: "10px", alignItems: "flex-start"}}>
         <img src="./src/assets/images/logo-light.png" />
         <ButtonToggle 
           leftIcon={<FaMoon />}
@@ -85,11 +85,9 @@ function App() {
         />
         <p>Query: {query}</p>
         <p>Debounced: {debouncedQuery}</p>
-        <ElementCard 
-          name={"Helium"} 
-          number={2} 
-          mass={4.0026022} 
-          symbol={"He"}        
+        <PeriodTable 
+          query={query}
+          phase={phase}
         />
       </main>
     </>

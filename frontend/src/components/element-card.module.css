@@ -7,10 +7,65 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 3px;
     width: 100%;
-    max-width: 225px;
-    padding: 10px 20px;
-    border: 7px solid var(--default-border-color);
+    /* max-width: 225px; */
+    padding: 3px 5px;
+    border: 3px solid var(--white);
     aspect-ratio: min(1vw, 1.85vh + (18 - 18) * 0.109vh);
 }
 
+.number {
+    align-self: flex-start;
+    font-size: 1.125em;
+    font-weight: 600;
+}
+
+.symbol {
+    font-size: 5vh;
+    font-weight: bold;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.reactive-nonmetals {
+    background-color: var(--reactive-nonmetals-color);
+}
+
+.noble-gas {
+    background-color: var(--noble-gases-color);
+}
+
+.alkali-metal {
+    background-color: var(--alkali-color);
+}
+
+.alkaline-earth-metal {
+    background-color: var(--alkaline-color);
+}
+
+.metalloid {
+    background-color: var(--metalloids-color);
+}
+
+.post-transition-metal {
+    background-color: var(--post-transition-color);
+}
+
+.transition-metal {
+    background-color: var(--transition-color);
+}
+
+.lanthanide {
+    background-color: var(--lanthanoids-color);
+}
+
+.actinide {
+    background-color: var(--actinoids-color);
+}
+
+.unknown {
+    background-color: var(--unknown-color);
+}
