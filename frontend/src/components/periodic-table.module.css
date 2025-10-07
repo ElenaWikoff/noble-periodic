@@ -2,6 +2,7 @@
 :root {
     --periods: 1em;
     --groups: 18;
+    --hover-border: rgb(0, 145, 255);
 }
 
 .container {
@@ -19,7 +20,6 @@
 .grid {
     display: grid;
     grid-template-columns: min-content repeat(var(--groups), minmax(0, 1fr));
-    /* grid-template-rows: repeat(10, minmax(0, 1fr)); */
     align-items: stretch;
     justify-items: stretch;
     width: 100%;
@@ -29,4 +29,9 @@
     aspect-ratio: 9 / 10;
     object-fit: contain;
     width: 100%;
+}
+
+.grid>*:hover {
+    border-color: var(--hover-border) !important;
+    box-shadow: none;
 }

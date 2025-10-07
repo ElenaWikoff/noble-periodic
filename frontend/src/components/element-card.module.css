@@ -1,24 +1,34 @@
 :root {
     /* Default Colors */
     --default-border-color: var(--graphite);
+
+    /* Border Colors */
+    --reactive-nonmetals-border: hsl(87, 74%, 80%);
+    --noble-gases-border: hsl(287, 100%, 83%);
+    --alkali-border: hsl(40, 89%, 75%);
+    --alkaline-border: hsl(55, 100%, 77%);
+    --metalloids-border: hsl(176, 28%, 79%);
+    --post-transition-border: hsl(199, 100%, 82%);
+    --transition-border: hsl(0, 100%, 83%);
+    --lanthanoids-border: hsl(36, 41%, 72%);
+    --actinoids-border: hsl(0, 100%, 84%);
+    --unknown-border: hsl(60, 20%, 84%);
 }
 
 .element-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 3px; */
     width: 100%;
-    /* max-width: 225px; */
-    padding: 3px 5px;
+    padding: 3px 4px;
     border: 3px solid var(--white);
-    aspect-ratio: min(1vw, 1.85vh + (18 - 18) * 0.109vh);
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em inset;
 }
 
 .number {
     align-self: flex-start;
-    font-size: clamp(0.25em, 0.036em + 0.571vw, 0.55em);
-    font-weight: 600;
+    font-size: clamp(0.35em, 0.064em + 0.762vw, 0.75em);
+    font-weight: 700;
 }
 
 .symbol {
@@ -37,40 +47,50 @@
 
 .reactive-nonmetals {
     background-color: var(--reactive-nonmetals-color);
+    border-color: var(--reactive-nonmetals-border);
 }
 
 .noble-gas {
     background-color: var(--noble-gases-color);
+    border-color: var(--noble-gases-border);
 }
 
 .alkali-metal {
     background-color: var(--alkali-color);
+    border-color: var(--alkali-border);
 }
 
 .alkaline-earth-metal {
     background-color: var(--alkaline-color);
+    border-color: var(--alkaline-border);
 }
 
 .metalloid {
     background-color: var(--metalloids-color);
+    border-color: var(--metalloids-border);
 }
 
 .post-transition-metal {
     background-color: var(--post-transition-color);
+    border-color: var(--post-transition-border);
 }
 
 .transition-metal {
     background-color: var(--transition-color);
+    border-color: var(--transition-border);
 }
 
 .lanthanide {
     background-color: var(--lanthanoids-color);
+    border-color: var(--lanthanoids-border);
 }
 
 .actinide {
     background-color: var(--actinoids-color);
+    border-color: var(--actinoids-border);
 }
 
 .unknown {
     background-color: var(--unknown-color);
+    border-color: var(--unknown-border);
 }
