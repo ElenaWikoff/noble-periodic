@@ -1,18 +1,32 @@
 
+:root {
+    --periods: 1em;
+    --groups: 18;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 600px;
     width: 100%;
-    aspect-ratio: 3/2;
+    height: auto;
+    aspect-ratio: 18/10;
+    font-size: 1.25rem;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(10, minmax(0, 1fr));
-    grid-template-rows: repeat(10, minmax(0, 1fr));
+    grid-template-columns: min-content repeat(var(--groups), minmax(0, 1fr));
+    /* grid-template-rows: repeat(10, minmax(0, 1fr)); */
     align-items: stretch;
     justify-items: stretch;
+    width: 100%;
+}
+
+.grid>* {
+    aspect-ratio: 9 / 10;
+    object-fit: contain;
     width: 100%;
 }

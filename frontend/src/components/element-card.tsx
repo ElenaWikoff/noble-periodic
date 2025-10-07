@@ -54,7 +54,7 @@ const ElementCard: React.FC<ElementCardProps> = ({
   return (
     <div 
       className={`${styles["element-card"]} ${styles[getColorClass()]} ${selected ? styles["selected"] : ""}`}
-      style={{gridRow: `${ypos}`, gridColumn: `${xpos}`}}
+      style={ (ypos && xpos) ? {gridRow: `${ypos + 1}`, gridColumn: `${xpos + 1}`} : {}}
       onChange={onChange}
     >
       <div className={styles.number}>{atomic_number}</div>
