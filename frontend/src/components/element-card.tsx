@@ -14,6 +14,7 @@ interface ElementCardProps extends React.ComponentPropsWithoutRef<"div"> {
   selected?: boolean,
   xpos?: number,
   ypos?: number,
+  size?: number,
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void,
 }
 
@@ -29,7 +30,8 @@ const ElementCard: React.FC<ElementCardProps> = ({
   selected,
   xpos,
   ypos,
-  onChange,
+  size,
+  ...restProps
 }) => {
 
   const getColorClass = () => {
@@ -54,8 +56,8 @@ const ElementCard: React.FC<ElementCardProps> = ({
   return (
     <div 
       className={`${styles["element-card"]} ${styles[getColorClass()]} ${selected ? styles["selected"] : ""}`}
-      style={ (ypos && xpos) ? {gridRow: `${ypos + 1}`, gridColumn: `${xpos + 1}`} : {}}
-      onChange={onChange}
+      style={ (ypos !== undefined && xpos !== undefined) ? {gridRow: `${ypos + 1} ${size ? `/ span ${size}` : ""}`, gridColumn: `${xpos + 1} ${size ? `/ span ${size}` : ""}`} : {}}
+      {...restProps}
     >
       <div className={styles.number}>{atomic_number}</div>
       <div className={styles.symbol}>{symbol}</div>
