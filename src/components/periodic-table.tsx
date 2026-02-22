@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from "@/components/periodic-table.module.css"
 import ElementCard from './element-card';
+import { RiExternalLinkLine as ExtIcon } from "react-icons/ri";
 
 interface PeriodicTableProps {
   query: string,
@@ -103,7 +104,7 @@ const PeriodTable: React.FC<PeriodicTableProps> = ({
             />
             <div className={styles.info}>
               {selected.source 
-                ? <a className={styles.name} target="_blank" href={selected.source}>{selected.name}</a>
+                ? <a className={styles.name} target="_blank" href={selected.source}>{selected.name} <ExtIcon/></a>
                 : <p>{selected.name}</p>
               }
               {selected.category ? <p><strong>Category:</strong> {selected.category}</p> : ""}
